@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'homework3'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.+')
+    testImplementation( 'org.hamcrest:hamcrest-library:2.2' )
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
