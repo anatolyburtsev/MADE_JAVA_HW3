@@ -4,7 +4,7 @@ import lombok.Builder;
 
 @Builder
 public class Address {
-    String zipcode;
-    String street;
-    int buildingNumber;
+    private String zipcode;
+    private String street;
+    private int buildingNumber;
 }

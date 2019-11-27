@@ -3,11 +3,12 @@ package model;
 import lombok.Builder;
 
 import java.util.Collection;
+import java.util.List;
 
 @Builder
 public class Person {
-    int age;
-    String name;
-    Address address;
-    Collection<String> phoneNumbers;
+    private int age;
+    private String name;
+    private Address address;
+    private List<String> phoneNumbers;
 }

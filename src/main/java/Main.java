@@ -15,10 +15,10 @@ public class Main {
                 .age(17).name("Ivan")
                 .address(address)
                 .phoneNumbers(List.of("123", "567", "890")).build();
-        Serializer sj = new JSONSerializer();
+        Serializer sj = ContextSerializer.newJsonSerializer();
         System.out.println(sj.serialize(p));
 
-        Serializer sx = new XMLSerializer();
+        Serializer sx = ContextSerializer.newXmlSerializer();
         System.out.println(sx.serialize(p));
     }
 }
